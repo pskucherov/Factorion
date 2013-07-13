@@ -1,0 +1,24 @@
+﻿<html>
+    <head>
+        <title>Factorion</title>
+        <script src="FindFactorions.js"></script>
+        <script>
+            var finder1, finder2, t1, t2;
+
+            finder1 = new FindFactorions();
+            t1 = Date.now();
+            finder1.processNumbers(true);
+            t2 = Date.now();
+            console.log("Factorions: ", finder1.factorions);
+            console.log("Time spent (Use factCache): " + (t2 - t1) + " ms");
+
+            finder2 = new FindFactorions();
+            t1 = Date.now();
+            finder2.processNumbers(false);
+            t2 = Date.now();
+            console.log("Factorions: ", finder2.factorions);
+            console.log("Time spent (Not use factCache): " + (t2 - t1) + " ms");
+        </script>
+    </head>
+    <body></body>
+</html>
