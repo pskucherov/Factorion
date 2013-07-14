@@ -2,6 +2,7 @@
     <head>
         <title>Factorion</title>
         <script src="FindFactorions.js"></script>
+        <script src="factorion.js"></script>
         <script>
             var finder1, finder2, t1, t2;
 
@@ -18,6 +19,12 @@
             t2 = Date.now();
             console.log("Factorions: ", finder2.factorions);
             console.log("Time spent (Not use factCache): " + (t2 - t1) + " ms");
+
+            t1 = Date.now();
+            console.log("Factorions: ", factorion(10000000));
+            t2 = Date.now();
+            console.log("Time spent (simple func): " + (t2 - t1) + " ms");
+
         </script>
     </head>
     <body></body>
